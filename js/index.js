@@ -36,7 +36,39 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//Nav Tags
+const nav1 = document.querySelector("nav");
+const newElement1 = document.createElement("a");
+newElement1.href = "#";
+// newElement1.style.color = "green";
+newElement1.textContent = "Home";
+
+
+const newElement5 = document.createElement("a");
+newElement5.href = "#";
+newElement5.textContent = "About";
+
+
+const newElement6 = document.createElement("a");
+newElement6.href = "#";
+newElement6.textContent = "Contact";
+
+
+nav1.prepend(newElement1);
+nav1.appendChild(newElement5);
+nav1.appendChild(newElement6);
+
+
+/*IMG*/
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Code Image 
+let mainImg = document.getElementById("cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+//Image Across Screen
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
