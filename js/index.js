@@ -49,7 +49,18 @@ navTag.forEach(a => {
   console.log(a);
   a.style.color = 'green';
 })
-/*IMG*/
+
+const Home = document.createElement('a');
+Home.textContent = "Home";
+const nav = document.querySelector("header nav");
+nav.prepend(Home);
+
+const Email = document.createElement('a');
+Email.textContent = "Email";
+const nav2 = document.querySelector("header nav");
+nav2.append(Email);
+
+/// ALL IMAGES 
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -64,12 +75,13 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
-//H1 and Button
+//H1
 
-let DOM = document.querySelector('h1');
+let DOM = document.querySelector('.cta-text h1');
 DOM.textContent = siteContent.cta.h1;
 
-let ctaButton = document.querySelector('button');
+//Button
+const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta.button;
 
 
@@ -92,11 +104,10 @@ topContent[4].textContent = siteContent['main-content']['vision-content']
 
 
 //Contact Section
-
+  // H4
 let contactTitle = document.querySelector('.contact h4');
 contactTitle.textContent = siteContent['contact']['contact-h4']
-
-
+  // Paragraph
 let contactContent = document.querySelectorAll('.contact p');
 contactContent[0].textContent = siteContent['contact']['address']
 contactContent[1].textContent = siteContent['contact']['phone']
